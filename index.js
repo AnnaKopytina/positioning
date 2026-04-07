@@ -22,3 +22,20 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+const progressFill = document.querySelector('.progress-fill');
+const duration = 3000;
+const frameRate = 15;
+const totalFrames = duration / frameRate;
+
+let currentFrame = 0;
+const timer = setInterval(() => {
+    currentFrame++;
+    let progressPercent = (currentFrame / totalFrames) * 100;
+    if (progressPercent <= 100) {
+        progressFill.style.width = progressPercent + "%";
+    } else {
+        clearInterval(timer);
+    }
+
+}, frameRate);
