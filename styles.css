@@ -1,0 +1,15 @@
+.logo{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.logo.logo6 img{
+    width: auto;
+    height: 130%;
+    transform: scale(2);
+}
